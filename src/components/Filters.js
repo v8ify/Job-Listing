@@ -10,9 +10,9 @@ class Filters extends Component {
 
   render() {
     return (
-      <div className="filter__item" onClick={this.onFilterClick}>
+      <p className="job__info__filter__item" onClick={this.onFilterClick}>
         {this.props.filter}
-      </div>
+      </p>
     );
   }
 }
