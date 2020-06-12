@@ -24,6 +24,10 @@ export const addFilters = filter => {
   return { type: "ADD_FILTERS", payload: filter };
 };
 
+export const deleteFilters = filter => {
+  return { type: "DELETE_FILTERS", payload: filter };
+};
+
 export const displayList = () => {
   return (dispatch, getState) => {
     const jobList = getState().completeJobsList;
@@ -32,7 +36,7 @@ export const displayList = () => {
     console.log(filters);
     const jobsToShow = [];
 
-    if (filters[0] === "" && filters.length === 1) {
+    if ((filters[0] === "" && filters.length === 1) || filters.length === 0) {
       dispatch({ type: "JOBS_TO_SHOW", payload: jobList });
     } else {
       jobList.forEach(job => {

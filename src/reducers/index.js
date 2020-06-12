@@ -12,7 +12,10 @@ const completeJobsListReducer = (state = [], action) => {
 const filtersReducer = (state = [], action) => {
   switch (action.type) {
     case "ADD_FILTERS":
-      return [...state, action.payload];
+      state = state.filter(Boolean);
+      return [...new Set([...state, action.payload])];
+    case "DELETE_FILTERS":
+      return state.filter(item => item !== action.payload);
     default:
       return state;
   }

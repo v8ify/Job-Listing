@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import Filters from "./Filters";
 
 export default class JobCard extends Component {
   render() {
     if (this.props.job === undefined) return null;
     const { job } = this.props;
     return (
-      <div>
+      <div className="JobCard">
         <img className="company__logo" src={job.logo} alt={job.company} />
         <div className="job__info">
           <div className="job__info--header">
@@ -22,7 +23,11 @@ export default class JobCard extends Component {
             <div className="job__info--location">{job.location}</div>
           </div>
         </div>
-        <div className="filters"></div>
+        <div className="filters">
+          {job.filters.map(filter => (
+            <Filters filter={filter} />
+          ))}
+        </div>
       </div>
     );
   }

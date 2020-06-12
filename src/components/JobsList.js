@@ -15,7 +15,6 @@ class JobsList extends Component {
     if (!this.props.jobsList || !this.props.jobsList[0]) return null;
     return (
       <div className="JobsList">
-        JobCard
         {this.props.jobsList.map(job => (
           <JobCard job={job} />
         ))}
