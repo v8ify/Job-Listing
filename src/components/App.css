@@ -58,6 +58,7 @@ body {
   font-size: 15px;
   font-weight: 700;
   color: var(--dark-cyan);
+  cursor: pointer;
 }
 
 .job__info--new {
@@ -83,6 +84,11 @@ body {
   font-size: 20px;
   color: var(--text-color);
   margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.job__info--title:hover {
+  color: var(--dark-cyan);
 }
 
 .job__info--footer {
@@ -109,6 +115,12 @@ body {
   border-radius: 5px;
   background-color: var(--filter-tablet);
   color: var(--dark-cyan);
+  cursor: pointer;
+}
+
+.job__info__filter__item:hover {
+  background-color: var(--dark-cyan);
+  color: white;
 }
 
 .FiltersBar {
@@ -120,10 +132,30 @@ body {
 }
 
 .FilterItem {
+  position: relative;
   font-size: 12px;
   padding: 8px 8px;
-  margin-left: 15px;
-  border-radius: 5px;
+  margin-left: 55px;
+  border-radius: 5px 0px 0px 5px;
   background-color: var(--filter-tablet);
   color: var(--dark-cyan);
+}
+
+.fa-times {
+  position: absolute;
+  top: 0;
+  right: -30px;
+  height: 100%;
+  width: 30px;
+  color: white;
+  border-radius: 0px 5px 5px 0px;
+  background-color: var(--dark-cyan);
+  padding-top: 7px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.fa-times:hover {
+  background-color: var(--text-color);
 }

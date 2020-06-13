@@ -10,8 +10,9 @@ class FilterItem extends Component {
 
   render() {
     return (
-      <div className="FilterItem" onClick={this.onFilterClick}>
-        {this.props.filter}
+      <div className="FilterItem">
+        {this.props.filter}{" "}
+        <i className="fas fa-times" onClick={this.onFilterClick}></i>
       </div>
     );
   }
