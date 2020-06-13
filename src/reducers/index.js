@@ -16,6 +16,8 @@ const filtersReducer = (state = [], action) => {
       return [...new Set([...state, action.payload])];
     case "DELETE_FILTERS":
       return state.filter(item => item !== action.payload);
+    case "CLEAR_FILTERS":
+      return [];
     default:
       return state;
   }

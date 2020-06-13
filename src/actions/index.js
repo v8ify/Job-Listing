@@ -28,12 +28,14 @@ export const deleteFilters = filter => {
   return { type: "DELETE_FILTERS", payload: filter };
 };
 
+export const clearFilters = () => {
+  return { type: "CLEAR_FILTERS" };
+};
+
 export const displayList = () => {
   return (dispatch, getState) => {
     const jobList = getState().completeJobsList;
-    console.log(jobList);
     const filters = getState().filters;
-    console.log(filters);
     const jobsToShow = [];
 
     if ((filters[0] === "" && filters.length === 1) || filters.length === 0) {

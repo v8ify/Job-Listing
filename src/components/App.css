@@ -22,13 +22,23 @@ body {
 .App {
   min-height: 100vh;
   background-color: var(--background);
-  padding: 1px 0;
+  padding: 0px 0;
+}
+
+.App-header {
+  height: 153px;
+  background-image: url("./background-image/bg-header-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--dark-cyan);
+  position: relative;
 }
 
 .JobsList {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   padding: 0px 160px;
+  margin-top: 80px;
 }
 
 .JobCard {
@@ -124,11 +134,14 @@ body {
 }
 
 .FiltersBar {
-  margin: 40px 160px;
+  margin: 0px 160px;
+  width: 78vw;
   display: flex;
   padding: 20px 40px;
   background-color: #fff;
   box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: -30px;
 }
 
 .FilterItem {
@@ -139,6 +152,18 @@ body {
   border-radius: 5px 0px 0px 5px;
   background-color: var(--filter-tablet);
   color: var(--dark-cyan);
+}
+
+.FiltersBar__clear {
+  margin-left: auto;
+  color: var(--dark-cyan);
+  cursor: pointer;
+  align-self: center;
+  font-size: 14px;
+}
+
+.FiltersBar__clear:hover {
+  text-decoration: underline;
 }
 
 .fa-times {
