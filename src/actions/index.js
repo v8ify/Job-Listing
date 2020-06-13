@@ -44,7 +44,6 @@ export const displayList = () => {
       jobList.forEach(job => {
         let condition = true;
         for (let i = 0; i < filters.length; i++) {
-          console.log(filters[i]);
           if (!job.filters.includes(filters[i])) {
             condition = false;
             break;

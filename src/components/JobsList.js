@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import JobCard from "./JobCard";
 import { connect } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
 import data from "./data.json";
 import { parseJobsList, addFilters, displayList } from "../actions/index";
 
@@ -16,7 +17,7 @@ class JobsList extends Component {
     return (
       <div className="JobsList">
         {this.props.jobsList.map(job => (
-          <JobCard job={job} />
+          <JobCard key={uuidv4()} job={job} />
         ))}
       </div>
     );

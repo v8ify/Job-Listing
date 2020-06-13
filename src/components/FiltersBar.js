@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { clearFilters, displayList } from "../actions/index";
 import FilterItem from "./FilterItem";
+import { v4 as uuidv4 } from "uuid";
 
 class FiltersBar extends Component {
   onClearClick = () => {
@@ -14,7 +15,7 @@ class FiltersBar extends Component {
     return (
       <div className="FiltersBar">
         {this.props.filters.map(filter => (
-          <FilterItem filter={filter} />
+          <FilterItem key={uuidv4()} filter={filter} />
         ))}
         <p className="FiltersBar__clear" onClick={this.onClearClick}>
           Clear

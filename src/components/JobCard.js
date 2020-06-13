@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Filters from "./Filters";
+import { v4 as uuidv4 } from "uuid";
 
 export default class JobCard extends Component {
   render() {
@@ -25,7 +26,7 @@ export default class JobCard extends Component {
         </div>
         <div className="filters">
           {job.filters.map(filter => (
-            <Filters filter={filter} />
+            <Filters key={uuidv4()} filter={filter} />
           ))}
         </div>
       </div>
