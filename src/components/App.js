@@ -11,6 +11,7 @@ function App() {
         <FiltersBar />
       </header>
       <JobsList />
+      <footer className="footer">created with ❤ by Prajwal J</footer>
     </div>
   );
 }

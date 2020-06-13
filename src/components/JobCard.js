@@ -6,7 +6,7 @@ export default class JobCard extends Component {
     if (this.props.job === undefined) return null;
     const { job } = this.props;
     return (
-      <div className="JobCard">
+      <div className={`JobCard ${job.featured && "JobCard__borderleft"}`}>
         <img className="company__logo" src={job.logo} alt={job.company} />
         <div className="job__info">
           <div className="job__info--header">
